@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Theme Made By www.w3schools.com - No Copyright -->
+		<title>web</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta property="og:image" content="2.jpg">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+		<link rel="prefetch" href="2.jpg">
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			body {
+				font: 500 15px/1.8 Lato, sans-serif;
+				color: #777;
+				/* margin: 0px;
+	padding: 0px;
+	background-color: #E7EAEB;
+	font-family:"微软雅黑","黑体","宋体";
+	font-size: 20px; */
+			}
+
+			h3,
+			h4 {
+				margin: 10px 0 30px 0;
+				letter-spacing: 10px;
+				font-size: 20px;
+				color: #111;
+			}
+
+			h1 {
+				margin: 10px 0 30px 0;
+				letter-spacing: 10px;
+				font-size: 40px;
+				color: #111;
+				text-align: center;
+				font-style: italic;
+
+			}
+
+			.container {
+				padding: 80px 60px;
+			}
+
+			.container1 {
+				padding: 80px 40px;
+			}
+
+			.person {
+				border: 10px solid transparent;
+				margin-bottom: 25px;
+				width: 60%;
+				height: 40%;
+				opacity: 0.7;
+			}
+
+			.person:hover {
+				border-color: #f1f1f1;
+			}
+
+			.carousel-inner img {
+				-webkit-filter: grayscale(0);
+				filter: grayscale(0);
+				/* make all photos black and white */
+				width: 100%;
+				/* Set width to 100% */
+				margin: auto;
+			}
+
+			.carousel-caption h3 {
+				color: #fff !important;
+				font-size: 20px;
+			}
+
+			.carousel-caption p {
+				color: #fff !important;
+				font-size: 20px;
+			}
+
+			@media (max-width: 600px) {
+				.carousel-caption {
+					display: none;
+					/* Hide the carousel text when the screen is less than 600 pixels wide */
+				}
+			}
+
+			.bg-1 {
+				background: #ffffff;
+				color: black;
+				font-size: 20px;
+			}
+
+			.bg-1 h3 {
+				color: #fff;
+			}
+
+			.bg-1 p {
+				font-style: italic;
+			}
+
+			.list-group-item:first-child {
+				border-top-right-radius: 0;
+				border-top-left-radius: 0;
+			}
+
+			.list-group-item:last-child {
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+
+			.thumbnail {
+				padding: 0 0 15px 0;
+				border: none;
+				border-radius: 0;
+			}
+
+			.thumbnail p {
+				margin-top: 15px;
+				color: #555;
+			}
+
+			.btn {
+				padding: 10px 20px;
+				background-color: #333;
+				color: #f1f1f1;
+				border-radius: 0;
+				transition: .2s;
+			}
+
+			.btn:hover,
+			.btn:focus {
+				border: 1px solid #333;
+				background-color: #fff;
+				color: #000;
+			}
+
+			.modal-header,
+			h4,
+			.close {
+				background-color: #333;
+				color: #fff !important;
+				text-align: center;
+				font-size: 30px;
+			}
+
+			.modal-header,
+			.modal-body {
+				padding: 40px 50px;
+			}
+
+			.nav-tabs li a {
+				color: #777;
+			}
+
+			#googleMap {
+				width: 100%;
+				height: 400px;
+				-webkit-filter: grayscale(100%);
+				filter: grayscale(100%);
+			}
+
+			.navbar {
+				font-family: Montserrat, sans-serif;
+				margin-bottom: 0;
+				background-color: #2d2d30;
+				border: 0;
+				font-size: 11px !important;
+				letter-spacing: 4px;
+				opacity: 0.9;
+			}
+
+			.navbar li a,
+			.navbar .navbar-brand {
+				color: #d5d5d5 !important;
+			}
+
+			.navbar-nav li a:hover {
+				color: #fff !important;
+			}
+
+			.navbar-nav li.active a {
+				color: #fff !important;
+				background-color: #29292c !important;
+			}
+
+			.navbar-default .navbar-toggle {
+				border-color: transparent;
+			}
+
+			.open .dropdown-toggle {
+				color: #fff;
+				background-color: #555 !important;
+			}
+
+			.dropdown-menu li a {
+				color: #000 !important;
+			}
+
+			.dropdown-menu li a:hover {
+				background-color: red !important;
+			}
+
+			footer {
+				background-color: #2d2d30;
+				color: #f5f5f5;
+				padding: 32px;
+			}
+
+			footer a {
+				color: #f5f5f5;
+			}
+
+			footer a:hover {
+				color: #777;
+				text-decoration: none;
+			}
+
+			.form-control {
+				border-radius: 0;
+			}
+
+			textarea {
+				resize: none;
+			}
+
+			.size {
+				font-size: 20px;
+			}
+
+			.text-center {
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#myPage">Meng Hua Lu</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#myPage">First</a></li>
+						<li><a href="#band">Second</a></li>
+						<li><a href="#tour">Third</a></li>
+						<li><a href="#contact">Fourth</a></li>
+						<li><a href="#last">last</a></li>
+
+						<li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img src="C430DF96885E324897CE659D73AFEF51.png" alt="风" width="200" height="700">
+					<div class="carousel-caption">
+						<h3>风</h3>
+						<p>梅经霜雪自傲骨，竹历疾风知劲节.</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<img src="B2EEF08FA971CB3F9469544D9ED8CC11.png" alt="Chicago" width="200" height="700">
+					<div class="carousel-caption">
+						<h3>雅</h3>
+						<p>书香墨韵缠灶火，便觉人间可流连。</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<img src="17831D847517CAAAA35205207C3C2F8B.png" alt="Los Angeles" width="200" height="700">
+					<div class="carousel-caption">
+						<h3>颂</h3>
+						<p>静室萦幽馥,凝神注茶汤。</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+
+		<!-- Container (The Band Section) -->
+		<div id="band" class="container text-center">
+			<h3>梦华录</h3>
+			<p><em>为什么梦华录短时间内如此爆火？</em></p>
+			<p class="size">
+				根据关汉卿元杂剧《赵盼儿风月救风尘》改编，讲述了三个女人经历各种困境，携手勇闯东京，并在皇城司指挥使顾千帆的帮助下，最终姐妹齐心，通过自己的努力将小茶坊变成东京最大酒楼的故事。剧情很是朴素,但是演员们演出的效果是深得人心,这部剧与其他古装偶像剧最大的不同，在于它在为观众养眼的同时,给关注们科普了一些宋代的历史文化,比如我们一致认为的拉花是外国的东西,其没想到早在宋代已经出现。
+			</p>
+			<br>
+			<div class="row">
+				<div class="col-sm-4">
+					<p class="text-center"><strong>赵盼儿</strong></p><br>
+					<a href="#demo" data-toggle="collapse">
+						<img src="zhaopaner.webp" class="img-circle person" alt="Random Name" width="255" height="255">
+					</a>
+					<div id="demo" class="collapse">
+						<p style="display: inline;">演员 </p>
+						<a href="https://baike.baidu.com/item/%E5%88%98%E4%BA%A6%E8%8F%B2/136156" target="_blank">刘亦菲
+							<span class="badge"></span></a><br>
+						<p>姿容秀丽、人间绝色</p>
+
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<p class="text-center"><strong>孙三娘</strong></p><br>
+					<a href="#demo2" data-toggle="collapse">
+						<img src="ssn.webp" class="img-circle person" alt="Random Name" width="255" height="255">
+					</a>
+					<div id="demo2" class="collapse">
+						<p style="display: inline;">演员 </p>
+						<a href="https://baike.baidu.com/item/%E6%9F%B3%E5%B2%A9/9476597" target="_blank">柳岩 <span
+								class="badge"></span></a>
+						<p>屠户出身、力大无穷</p>
+
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<p class="text-center"><strong>宋引章</strong></p><br>
+					<a href="#demo3" data-toggle="collapse">
+						<img src="syz.webp" class="img-circle person" alt="Random Name" width="255" height="255">
+					</a>
+					<div id="demo3" class="collapse">
+						<p style="display: inline;">演员 林允</p>
+						<a href="https://baike.baidu.com/item/%E6%9E%97%E5%85%81" target="_blank">林允 <span
+								class="badge"></span></a>
+						<p>钱塘乐工，其琵琶技艺江南一绝</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Container (TOUR Section) -->
+
+		<div id="tour" class="container ">
+			<p class="text-center" style="font-size:30px;font-style: italic;"><strong>文化输出</strong></p><br>
+
+
+			<!-- Left-aligned media object -->
+			<div class="media">
+				<div class="media-left">
+					<img src="lahua.jpg" class="media-object img-rounded" style="width:350px;height: 250px;">
+					<p style="font-size:15px;font-style: italic;">电视剧《梦华录》中赵盼儿制作的茶百戏(拉花)</p>
+				</div>
+				<div class="media-body">
+
+					<p style="font-style: italic;font-size:18px">很多第一次知道<a
+							href="https://baike.baidu.com/item/%E8%8C%B6%E7%99%BE%E6%88%8F" target="_blank">茶百戏 </a>
+
+						的网友，都会惊呼“这不就是古代的咖啡拉花吗
+						其实，茶百戏和咖啡拉花有着本质上的区别。
+						咖啡拉花是将牛奶加入咖啡，通过不同颜色的叠加形成图案，而茶百戏只用清水在茶汤表面幻变图案。
+						所有我们祖先的茶百戏才是咖啡拉花的祖先。</p>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid black;">
+
+			<!-- Right-aligned media object -->
+			<div class="media">
+				<div class="media-body">
+
+					<p style="font-style: italic;font-size:18px;"> 剧中的舞蹈被指出抄袭<a
+							href="https://baike.baidu.com/item/%E5%94%90%E5%AE%AB%E5%A4%9C%E5%AE%B4/56043976"
+							target="_blank">《唐宫夜宴》</a>,但如果仔细对比,这两组舞蹈没有任何联系,其实这只是还原宋代当时名乐歌姬时的场面,很是唯美震撼。</p>
+				</div>
+				<div class="media-right">
+					<img src="wudao.png" class="media-object img-rounded" style="width:350px;height: 250px;">
+					<p style="font-size:15px;font-style: italic;">"花月宴的舞蹈"</p>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid black;">
+			<div class="media">
+				<div class="media-left">
+					<img src="chaju.png" class="media-object img-rounded" style="width:350px;height: 250px;">
+					<p style="font-size:18px;font-style: italic;">《梦华录》中还原的宋代复杂的茶具吻合《茶具谱赞》上记载的宋代茶具</p>
+				</div>
+				<div class="media-body">
+
+					<p style="font-style: italic;font-size:18px;">
+						《梦华录》记载，宋代高档的茶坊插四时花，挂名人字画，“列花架，安顿奇松异桧等物于其上，装饰店面”。有些茶坊还会邀请艺人献艺，以招徕顾客。洪迈《夷坚志》载，乾道年间，吕德卿偕其友前往杭州，在“嘉会门外茶肆中坐，见幅纸用绯贴尾云：‘今晚讲汉书’”。这家茶坊不但有说书节目，还张贴出节目预告。
+						吴钩书中谈及，宋代平康诸坊的清乐茶坊、八仙茶坊、珠子茶坊、潘家茶坊、连三茶坊、连二茶坊，平日里都有歌妓迎客：“莫不靓妆迎门，争妍卖笑，朝歌暮弦，摇荡心目”。《梦华录》中，宋引章在茶馆弹琵琶，也吻合宋代的真实情况。
+					</p>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid black;">
+			<div class="media">
+				<div class="media-body">
+
+					<p style="font-style: italic;font-size:18px;">宋人吴自牧在其笔记《梦粱录》记载
+
+						“烧香点茶，挂画插花，四般闲事,不宜累家”
+
+						点出了宋代雅致生活的“四事”或“四艺”
+
+						而在《梦华录》里也一一体现</p>
+				</div>
+				<div class="media-right">
+					<img src="chahua.png" class="media-object img-rounded" style="width:390px;height: 250px;">
+					<p style="font-size:15px;font-style: italic;">"花月宴的舞蹈"</p>
+				</div>
+			</div>
+
+
+		</div>
+
+		<!-- Modal -->
+
+
+
+		<!-- Container (Contact Section) -->
+		<div id="contact" class="container">
+			<h3 class="text-center">红杏枝头春意闹</h3>
+
+			<video controls autobuffer="true" width="100%" poster="../assets/img/poster.jpg">
+				<source src="video.mp4">
+
+			</video>
+
+
+
+		</div>
+		<div id="last" class="container1">
+
+
+			<section id="intro">
+				<header>
+					<h1 id="heading">此生必娶刘亦菲，<br />不行就下辈子！<br /></h1>
+
+
+					<div id="slice-left" class="slice left"></div>
+					<div id="slice-right" class="slice right"></div>
+				</header>
+			</section>
+			<hr>
+			<h2 style="font-size: 50px;"  class="text-center"> from the @wengtianxin</h2>
+			
+
+			
+
+
+		</div>
+		<!-- Image of location/map -->
+
+		
+		<!-- Footer -->
+		<footer class="text-center">
+			<a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+				<span class="glyphicon glyphicon-chevron-up"></span>
+			</a><br><br>
+
+		</footer>
+
+		<script>
+			$(document).ready(function() {
+				// Initialize Tooltip
+				$('[data-toggle="tooltip"]').tooltip();
+
+				// Add smooth scrolling to all links in navbar + footer link
+				$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+					// Make sure this.hash has a value before overriding default behavior
+					if (this.hash !== "") {
+
+						// Prevent default anchor click behavior
+						event.preventDefault();
+
+						// Store hash
+						var hash = this.hash;
+
+						// Using jQuery's animate() method to add smooth page scroll
+						// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+						$('html, body').animate({
+							scrollTop: $(hash).offset().top
+						}, 900, function() {
+
+							// Add hash (#) to URL when done scrolling (default click behavior)
+							window.location.hash = hash;
+						});
+					} // End if
+				});
+			})
+		</script>
+
+	</body>
+</html>
